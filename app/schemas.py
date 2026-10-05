@@ -19,3 +19,21 @@ class GeneratedApplication(BaseModel):
     files:List[GeneratedFile]
     dependencies:List[str]=[]
 
+class Screen(BaseModel):
+    name:str
+    route:str 
+    description: str
+
+class Component(BaseModel):
+    name:str 
+    description:str 
+
+class GeneratedApplication(BaseModel):
+    app_name:str
+    platform:str 
+    framework:str 
+    description:str 
+    screens:list[Screen]
+    components:list[Component]
+
+
